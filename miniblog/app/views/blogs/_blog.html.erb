@@ -1,0 +1,21 @@
+<div class="row__container">
+  <div class="row__container-content">
+    <div class="card blue-grey darken">
+      <div class="card-content white-text">
+        <span class="card-title">
+          <p ><%= blog.title %></p></span>
+          <p><%= blog.text %></p>
+      </div>
+    <div class="card-action">
+      <div class="card-action-time">
+      <%= l blog.created_at, format: :long %>
+      </div>
+      <%= link_to '詳細', "/blogs/#{blog.id}", method: :get %>
+      <% if user_signed_in? %>
+      <%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %>
+      <%= link_to '削除', "/blogs/#{blog.id}", method: :delete %>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>

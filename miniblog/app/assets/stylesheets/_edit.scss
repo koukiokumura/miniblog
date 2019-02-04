@@ -1,0 +1,23 @@
+.edit-title{
+  margin:0 100px;
+  font-size:40px;
+}
+.edit-text{
+  margin:0 40px;
+  height: 40vh;
+  font-size: 30px;
+}
+#blog_text{
+  height:30vh;
+}
+.edit-actions{
+  width:300px;
+  margin:0 auto;
+  text-align: center;
+}
+.edit-actions input{
+  @include botan
+}
+.edit-actions input:active{
+  @include botan-active
+}

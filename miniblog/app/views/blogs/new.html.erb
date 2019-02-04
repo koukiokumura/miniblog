@@ -1,0 +1,17 @@
+<div id="signup-modal">
+  <%= form_for @blog do |f| %>
+  <div class="new-title">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="new-text">
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+  </div>
+
+  <div class="new-actions">
+    <%= f.submit "新規投稿" %>
+  </div>
+  <% end %>
+</div>

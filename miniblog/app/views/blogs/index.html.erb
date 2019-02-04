@@ -1,0 +1,10 @@
+<div class="row">
+  <tbody>
+  <% @blogs.each do |blog| %>
+    <%= render partial: "blog", locals: { blog: blog } %>
+  <% end %>
+</tbody>
+</div>
+<%= paginate(@blogs) %>
+
+

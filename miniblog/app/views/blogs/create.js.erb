@@ -1,0 +1,7 @@
+
+$("#user-modal").modal("hide");
+<% if @status == 'success' %>
+$("tbody").append("<%= j(render partial: 'li', locals:{ blog: @blog}) %>");
+<% elsif @status == 'fail' %>
+alert('error!');
+<% end %>

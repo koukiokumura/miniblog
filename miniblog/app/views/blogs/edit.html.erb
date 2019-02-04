@@ -1,0 +1,16 @@
+<%= form_for @blog do |f| %>
+  <div class="edit-title">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="edit-text">
+    <%= f.label :text %>
+    <%= f.text_area :text ,:size => "600x40"%>
+  </div>
+
+  <div class="edit-actions">
+    <%= f.submit "編集" %>
+  </div>
+<% end %>
+

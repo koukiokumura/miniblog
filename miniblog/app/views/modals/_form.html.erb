@@ -1,0 +1,37 @@
+
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <%= form_with(model: @user,remote: true) do |form| %>
+    <% if @user.errors.any? %>
+<div id="error_explanation">
+
+<h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <ul>
+          <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+<div class="modal-body">
+
+<div class="form-group field">
+          <%= form.label :name , class: "form-control-label"%>
+          <%= form.text_field :name, id: :user_name, class: "form-control" %>
+        </div>
+    </div>
+<div class="modal-footer actions">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <%= form.submit class: "btn btn-primary"%>
+    </div>
+
+    <% end %>
+  </div>
+</div>
+Markup
